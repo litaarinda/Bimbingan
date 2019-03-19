@@ -24,7 +24,7 @@
 .skin-blue .sidebar a{color:#2B92CA}
 .skin-blue .sidebar a:hover{text-decoration:none}
 .skin-blue .sidebar-menu .treeview-menu>li>a{color:#2B92CA}
-.skin-blue .sidebar-menu .treeview-menu>li.active>a,.skin-blue .sidebar-menu .treeview-menu>li>a:hover{color:#fff;}
+.skin-blue .sidebar-menu .treeview-menu>li.active>a,.skin-blue .sidebar-menu .treeview-menu>li>a:hover{color:#2B92CA;background:#eaecef;}
 .skin-blue .sidebar-form{
     border-radius:3px;
     border:1px solid #374850;

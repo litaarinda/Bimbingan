@@ -1,12 +1,12 @@
-@extends('dosen.layout.auth')
+@extends('dosen.layout.nav')
 
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="ol-md-6 col-md-offset-3">
             <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
+                <div class="panel-heading" style="background-color:#d9dbde;"><Strong>Dosen Login</Strong></div>
+                <div class="panel-body" style="background-color:#eaedf1;">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/dosen/login') }}">
                         {{ csrf_field() }}
 
@@ -14,7 +14,7 @@
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" autofocus>
+                                <input id="email" type="email" class="form-control" name="email" placeholder="Your Email" value="{{ old('email') }}" autofocus>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -28,7 +28,7 @@
                             <label for="password" class="col-md-4 control-label">Password</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password">
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Your Password">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
