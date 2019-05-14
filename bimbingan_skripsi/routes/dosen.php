@@ -10,3 +10,4 @@ Route::get('/home', function () {
     return view('dosen.dashboard');
 })->name('home');
 
+Route::get('/daftarmhs', 'daftarMhsController@index')->name('DaftarMhs');

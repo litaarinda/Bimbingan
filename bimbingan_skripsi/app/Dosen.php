@@ -16,7 +16,7 @@ class Dosen extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'nip','name','jabatan','dosen_id', 'email', 'password',
     ];
 
     /**
@@ -37,5 +37,9 @@ class Dosen extends Authenticatable
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new DosenResetPassword($token));
+    }
+
+    public function mahasiswa(){
+        return $this->hasMany('App\Mahasiswa');   
     }
 }

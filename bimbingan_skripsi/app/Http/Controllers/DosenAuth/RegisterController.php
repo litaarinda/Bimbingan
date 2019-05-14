@@ -49,7 +49,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+            'nip' => 'required|max:255',
             'name' => 'required|max:255',
+            'jabatan' => 'required|max:255',
             'email' => 'required|email|max:255|unique:dosens',
             'password' => 'required|min:6|confirmed',
         ]);
@@ -64,7 +66,9 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return Dosen::create([
+            'nip' => $data['nip'],
             'name' => $data['name'],
+            'jabatan' => $data['jabatan'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);

@@ -29,6 +29,7 @@ Route::group(['prefix' => 'admin'], function () {
   Route::get('/password/reset/{token}', 'AdminAuth\ResetPasswordController@showResetForm');
 });
 
+
 Route::group(['prefix' => 'dosen'], function () {
   Route::get('/login', 'DosenAuth\LoginController@showLoginForm')->name('login');
   Route::post('/login', 'DosenAuth\LoginController@login');
@@ -56,3 +57,9 @@ Route::group(['prefix' => 'mahasiswa'], function () {
   Route::get('/password/reset', 'MahasiswaAuth\ForgotPasswordController@showLinkRequestForm')->name('password.reset');
   Route::get('/password/reset/{token}', 'MahasiswaAuth\ResetPasswordController@showResetForm');
 });
+// Route::group(['middleware' => 'dosen'], function () {
+//   Route::get('/dosen/daftarmhs', 'DosenController@index');
+// });
+// Route::group(['middleware' => 'dosen'], function () {
+//   Route::get('/dosen/daftarmhs', 'DosenController@index');
+// });

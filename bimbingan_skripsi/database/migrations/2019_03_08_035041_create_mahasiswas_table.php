@@ -14,7 +14,9 @@ class CreateMahasiswasTable extends Migration
     {
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nim')->unique();
             $table->string('name');
+            $table->string('angkatan');
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();

@@ -10,6 +10,20 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/dosen/register') }}">
                         {{ csrf_field() }}
 
+                        <div class="form-group{{ $errors->has('nip') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">NIP</label>
+            
+                            <div class="col-md-6">
+                                <input id="nip" type="text" class="form-control" name="nip" value="{{ old('nip') }}" autofocus>
+            
+                                @if ($errors->has('nip'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('nip') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Name</label>
 
@@ -23,6 +37,21 @@
                                 @endif
                             </div>
                         </div>
+
+                        <div class="form-group{{ $errors->has('jabatan') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">Jabatan</label>
+            
+                            <div class="col-md-6">
+                                <input id="jabatan" type="text" class="form-control" name="jabatan" value="{{ old('jabatan') }}" autofocus>
+            
+                                @if ($errors->has('jabatan'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('jabatan') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+            
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
